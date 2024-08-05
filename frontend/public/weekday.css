@@ -1,55 +1,94 @@
-/* Reset default margin and padding */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* weekday.css */
 
-/* Responsive styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 #schedule {
+    width: 100%;
     max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin: 0 20px;
+    /* Ensure it looks good on smaller screens */
 }
 
 .heading {
+    background: #2c3e50;
+    color: white;
+    padding: 20px;
     text-align: center;
-    margin-bottom: 20px;
+}
+
+.heading h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.heading .time,
+.heading .Date,
+.heading .day {
+    margin-bottom: 5px;
 }
 
 .course-info {
-    background-color: #fff;
-    border-radius: 5px;
-    padding: 15px;
-    margin-bottom: 20px;
+    padding: 20px;
+    border-bottom: 1px solid #e0e0e0;
 }
 
-.course-number,
-.course-name,
-.course-credits,
-.course-details,
-.next-course {
+.course-info .course-number,
+.course-info .course-name,
+.course-info .course-credits {
+    font-size: 18px;
     margin-bottom: 10px;
 }
 
 .course-details {
     display: flex;
     justify-content: space-between;
+    font-size: 16px;
 }
 
-@media only screen and (max-width: 600px) {
-    #schedule {
-        padding: 10px;
+.next-course {
+    padding: 20px;
+    text-align: center;
+}
+
+.next-course .next-course-name {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.next-course .next-course-time {
+    font-size: 16px;
+}
+
+@media (max-width: 600px) {
+    .heading h1 {
+        font-size: 20px;
     }
 
-    .course-info {
-        padding: 10px;
+    .course-info .course-number,
+    .course-info .course-name,
+    .course-info .course-credits {
+        font-size: 16px;
+    }
+
+    .course-details {
+        flex-direction: column;
+    }
+
+    .next-course .next-course-name,
+    .next-course .next-course-time {
+        font-size: 16px;
     }
 }
