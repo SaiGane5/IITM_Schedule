@@ -1,19 +1,29 @@
-/* weekend.css */
-
+/* General styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
 }
 
 .holiday {
     text-align: center;
-    margin-top: 50px;
+    padding: 20px;
 }
 
-.holiday h1 {
-    color: #ff6347;
-    font-size: 2.5em;
-    text-shadow: 2px 2px #ddd;
+h1 {
+    color: #333;
+    font-size: 24px;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    h1 {
+        font-size: 18px;
+    }
 }

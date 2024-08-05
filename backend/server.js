@@ -79,8 +79,7 @@ app.get('/', (req, res) => {
                 return;
             }
         }
-        res.send('<h1>No current classes.</h1>');
-    }
+        res.send('<body style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #f0f0f0; font-family: Arial;"><div style="background-color: #fff; padding: 20px; border-radius: 5px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);"><h1 style="color: #333; text-align: center;">No current classes.</h1></div></body>');    }
 });
 
 app.listen(PORT, () => {
