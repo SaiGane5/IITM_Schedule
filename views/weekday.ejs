@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/weekday.css">
     <title>Schedule</title>
+    <script>
+        function refreshPage() {
+            setTimeout(() => {
+                location.reload();
+            }, 1000); // Refresh every second
+        }
+        window.onload = refreshPage;
+    </script>
 </head>
 
 <body>
