@@ -1,12 +1,8 @@
-// function convertUTCtoIST(utcDate) {
-//     const istOffset = 5.5 * 60 * 60 * 1000; // 5.5 hours in milliseconds
-//     return new Date(utcDate.getTime() + istOffset);
-// }
 const slot = {
     A: {
         location: "MSB 245",
         credits: 10,
-        ProfImage: "https://mech.iitm.ac.in/images/inner-facs/anilm.png",
+        ProfImage: "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=kNu5UuIAAAAJ&citpid=8",
         ProfName: "Anil Meena",
         CourseNum: "ME3301",
         CourseName: "Manufacturing Technology",
@@ -14,7 +10,7 @@ const slot = {
     B: {
         location: "CRC 204",
         credits: 10,
-        ProfImage: "https://mech.iitm.ac.in/images/inner-facs/dhiman.png",
+        ProfImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKcF4S9Azg0eZykVhggt4X4Mn3nHzkH_H0_Q&s",
         ProfName: "Dhiman Chatterjee",
         CourseNum: "ME3103",
         CourseName: "Energy Conversion System",
@@ -38,7 +34,7 @@ const slot = {
     T: {
         location: "Machine Design Section, NAC",
         credits: 7,
-        ProfImage: "https://mech.iitm.ac.in/images/inner-facs/srakshit.png",
+        ProfImage: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1kPGqS3RIOW2xy7D4PNE9rl6q0O1r9c5rRB-B5u39juOiskBnkupIw8ufOD1JmaiwgC4&usqp=CAU",
         ProfName: "Saurav Rakshit",
         CourseNum: "ME3281",
         CourseName: "Machine Drawing Practice",
@@ -46,8 +42,8 @@ const slot = {
     S: {
         location: "MSB",
         credits: 3,
-        ProfImage: "Thelidu",
-        ProfName: "Thelidu",
+        ProfImage: "https://scholar.googleusercontent.com/citations?view_op=medium_photo&user=RSHzl7cAAAAJ&citpid=2",
+        ProfName: "Prabhu RajaGopal",
         CourseNum: "ME3481",
         CourseName: "Mechanical Engineering, Lab II",
     },
@@ -69,7 +65,7 @@ const Schedule = [
     ],
     [
         {
-            StartTime: new Date().setUTCHours(2,30),
+            StartTime: new Date().setUTCHours(2,0),
             EndTime: new Date().setUTCHours(3,20),
             location: slot.A.location,
             credits: slot.A.credits,
@@ -79,7 +75,7 @@ const Schedule = [
             CourseName: slot.A.CourseName,
         },
         {
-            StartTime: new Date().setUTCHours(3, 30),
+            StartTime: new Date().setUTCHours(3, 20),
             EndTime: new Date().setUTCHours(4, 20),
             location: slot.B.location,
             credits: slot.B.credits,
@@ -89,7 +85,7 @@ const Schedule = [
             CourseName: slot.B.CourseName,
         },
         {
-            StartTime: new Date().setUTCHours(4, 30),
+            StartTime: new Date().setUTCHours(4, 20),
             EndTime: new Date().setUTCHours(5, 20),
             location: slot.C.location,
             credits: slot.C.credits,
@@ -101,7 +97,7 @@ const Schedule = [
     ],
     [
         {
-            StartTime: new Date().setUTCHours(2, 30),
+            StartTime: new Date().setUTCHours(2, 0),
             EndTime: new Date().setUTCHours(3, 20),
             location: slot.B.location,
             credits: slot.B.credits,
@@ -111,8 +107,8 @@ const Schedule = [
             CourseName: slot.B.CourseName,
         },
         {
-            StartTime: new Date().setUTCHours(3, 30),
-            EndTime: new Date().setUTCHours(4, 20),
+            StartTime: new Date().setUTCHours(3, 20),
+            EndTime: new Date().setUTCHours(8, 20),
             location: slot.C.location,
             credits: slot.C.credits,
             ProfImage: slot.C.ProfImage,
@@ -121,7 +117,7 @@ const Schedule = [
             CourseName: slot.C.CourseName,
         },
         {
-            StartTime: new Date().setUTCHours(7, 30),
+            StartTime: new Date().setUTCHours(7, 0),
             EndTime: new Date().setUTCHours(8, 20),
             location: slot.A.location,
             credits: slot.A.credits,
@@ -133,7 +129,7 @@ const Schedule = [
     ],
     [
         {
-            StartTime: new Date().setUTCHours(2, 30),
+            StartTime: new Date().setUTCHours(2, 0),
             EndTime: new Date().setUTCHours(3, 20),
             location: slot.C.location,
             credits: slot.C.credits,
@@ -143,7 +139,7 @@ const Schedule = [
             CourseName: slot.C.CourseName,
         },
         {
-            StartTime: new Date().setUTCHours(5, 30),
+            StartTime: new Date().setUTCHours(5, 0),
             EndTime: new Date().setUTCHours(6, 20),
             location: slot.F.location,
             credits: slot.F.credits,
@@ -153,7 +149,7 @@ const Schedule = [
             CourseName: slot.F.CourseName,
         },
         {
-            StartTime: new Date().setUTCHours(7, 30),
+            StartTime: new Date().setUTCHours(7, 0),
             EndTime: new Date().setUTCHours(8, 20),
             location: slot.B.location,
             credits: slot.B.credits,
@@ -163,7 +159,7 @@ const Schedule = [
             CourseName: slot.B.CourseName,
         },
         {
-            StartTime: new Date().setUTCHours(12, 30),
+            StartTime: new Date().setUTCHours(12, 0),
             EndTime: new Date().setUTCHours(15, 0),
             location: slot.LifeSkills.location,
             credits: slot.LifeSkills.credits,
@@ -175,7 +171,7 @@ const Schedule = [
     ],
     [
         {
-            StartTime: new Date().setUTCHours(3, 30),
+            StartTime: new Date().setUTCHours(3, 0),
             EndTime: new Date().setUTCHours(4, 20),
             location: slot.F.location,
             credits: slot.F.credits,
@@ -185,7 +181,7 @@ const Schedule = [
             CourseName: slot.F.CourseName,
         },
         {
-            StartTime: new Date().setUTCHours(5, 30),
+            StartTime: new Date().setUTCHours(5, 0),
             EndTime: new Date().setUTCHours(6, 20),
             location: slot.A.location,
             credits: slot.A.credits,
@@ -195,7 +191,7 @@ const Schedule = [
             CourseName: slot.A.CourseName,
         },
         {
-            StartTime: new Date().setUTCHours(8, 30),
+            StartTime: new Date().setUTCHours(8, 0),
             EndTime: new Date().setUTCHours(11, 15),
             location: slot.S.location,
             credits: slot.S.credits,
@@ -207,7 +203,7 @@ const Schedule = [
     ],
     [
         {
-            StartTime: new Date().setUTCHours(2, 30),
+            StartTime: new Date().setUTCHours(2, 0),
             EndTime: new Date().setUTCHours(3, 20),
             location: slot.F.location,
             credits: slot.F.credits,
@@ -217,7 +213,7 @@ const Schedule = [
             CourseName: slot.F.CourseName,
         },
         {
-            StartTime: new Date().setUTCHours(4, 30),
+            StartTime: new Date().setUTCHours(4, 20),
             EndTime: new Date().setUTCHours(5, 20),
             location: slot.A.location,
             credits: slot.A.credits,
@@ -227,7 +223,7 @@ const Schedule = [
             CourseName: slot.A.CourseName,
         },
         {
-            StartTime: new Date().setUTCHours(5, 30),
+            StartTime: new Date().setUTCHours(5, 20),
             EndTime: new Date().setUTCHours(6, 20),
             location: slot.B.location,
             credits: slot.B.credits,
@@ -237,7 +233,7 @@ const Schedule = [
             CourseName: slot.B.CourseName,
         },
         {
-            StartTime: new Date().setUTCHours(7, 30),
+            StartTime: new Date().setUTCHours(7, 0),
             EndTime: new Date().setUTCHours(8, 20),
             location: slot.C.location,
             credits: slot.C.credits,
@@ -247,7 +243,7 @@ const Schedule = [
             CourseName: slot.C.CourseName,
         },
         {
-            StartTime: new Date().setUTCHours(8, 30),
+            StartTime: new Date().setUTCHours(8, 20),
             EndTime: new Date().setUTCHours(11, 15),
             location: slot.T.location,
             credits: slot.T.credits,

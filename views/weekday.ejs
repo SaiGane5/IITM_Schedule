@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./public/weekday.css">
+    <link rel="stylesheet" type="text/css" href="/weekday.css">
     <title>Schedule</title>
 </head>
 
@@ -13,41 +13,47 @@
         <div class="heading">
             <h1>
                 <div class="time">
-                    <%=Time%>
+                    <%= Time %>
                 </div>
-                <div class="Date">
-                    <%=Date%>
+                <div class="date">
+                    <%= Date %>
                 </div>
                 <div class="day">
-                    Day: <%=Day%>
+                    Day: <%= Day %>
                 </div>
             </h1>
         </div>
         <div class="course-info">
             <div class="course-number">
-                Number: <%=CourseNum%>
+                Number: <%= CourseNum %>
             </div>
             <div class="course-name">
-                Course: <%=CourseName%>
+                Course: <%= CourseName %>
             </div>
             <div class="course-credits">
-                Credits: <%=credits%>
+                Credits: <%= credits %>
             </div>
             <div class="course-details">
                 <div class="course-location">
-                    Location: <%=location%>
+                    Location: <%= location %>
                 </div>
                 <div class="prof-name">
-                    Professor: <%=ProfName%>
+                    Professor: <%= ProfName %>
+                </div>
+                <div class="prof-image">
+                    <img src="<%= ProfImage %>" alt="<%= ProfName %>'s Profile Picture">
                 </div>
             </div>
         </div>
         <div class="next-course">
             <div class="next-course-name">
-                Next Course: <%=nextCourse%>
+                Next Course: <%= nextCourse %>
             </div>
             <div class="next-course-time">
-                Next Class at: <%=nextTime%>
+                Next Class at: <%= nextTime %>
+            </div>
+            <div class="next-course-location">
+                Next Venue: <%= nextVenue %>
             </div>
         </div>
     </div>

@@ -12,16 +12,13 @@ const PORT = 3000;
 const app = express();
 
 // Set the views directory and view engine
-app.set('views', path.join(__dirname, '../frontend'));
 app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Middleware
 app.use(bodyParser.urlencoded({ extended: true }));
 
-// function convertUTCtoIST(utcDate) {
-//     const istOffset = 5.5 * 60 * 60 * 1000; // 5.5 hours in milliseconds
-//     return new Date(utcDate.getTime() + istOffset);
-// }
 app.get('/', (req, res) => {
     const date = new Date();
 
@@ -33,7 +30,6 @@ app.get('/', (req, res) => {
         minute: 'numeric',
         second: 'numeric'
     });
-    console.log(timeInIST);
 
     if (day === 0 || day === 6) {
         res.render('weekend', {
@@ -61,6 +57,7 @@ app.get('/', (req, res) => {
                     second: 'numeric'
                 });
                 const nextcr = nextCourse.CourseName;
+                const nextvenue = nextCourse.location;
 
                 res.render('weekday', {
                     Time: timeInIST,
@@ -74,8 +71,8 @@ app.get('/', (req, res) => {
                     CourseName: crname,
                     nextTime: nexttimeInIST,
                     nextCourse: nextcr,
+                    nextVenue: nextvenue,
                 });
-                console.log(date);
                 return;
             }
         }
