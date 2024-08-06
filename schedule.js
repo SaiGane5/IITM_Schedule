@@ -108,7 +108,7 @@ const Schedule = [
         },
         {
             StartTime: new Date().setUTCHours(3, 20),
-            EndTime: new Date().setUTCHours(8, 20),
+            EndTime: new Date().setUTCHours(4, 20),
             location: slot.C.location,
             credits: slot.C.credits,
             ProfImage: slot.C.ProfImage,
@@ -117,7 +117,7 @@ const Schedule = [
             CourseName: slot.C.CourseName,
         },
         {
-            StartTime: new Date().setUTCHours(7, 0),
+            StartTime: new Date().setUTCHours(6, 57),
             EndTime: new Date().setUTCHours(8, 20),
             location: slot.A.location,
             credits: slot.A.credits,
