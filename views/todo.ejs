@@ -4,8 +4,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="/style.css">
+    <!-- <link rel="stylesheet" type="text/css" href="/todo.css"> -->
     <title>To-Do List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #todo {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            flex: 1;
+            padding: 5px;
+            margin-right: 5px;
+            border: 1px solid #ddd;
+            border-radius: 3px;
+        }
+
+        button {
+            padding: 5px 10px;
+            border: none;
+            background-color: #5cb85c;
+            color: #fff;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 0;
+            border-bottom: 1px solid #ddd;
+        }
+
+        li:last-child {
+            border-bottom: none;
+        }
+
+        li form {
+            margin: 0;
+        }
+
+        li span {
+            margin-left: 10px;
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        li button {
+            background-color: #d9534f;
+        }
+    </style>
 </head>
 
 <body>
@@ -19,12 +98,20 @@
             <% todos.forEach(todo=> { %>
                 <li>
                     <form action="/todos/<%= todo.id %>?_method=PUT" method="POST" style="display:inline;">
-                        <input type="checkbox" onchange="this.form.submit()" <%=todo.completed ? 'checked' : '' %> />
+                        <input type="checkbox" onchange="this.form.submit()" name="completed" value="true"
+                            <%=todo.completed ? 'checked' : '' %> />
                     </form>
                     <%= todo.task %>
-                        <form action="/todos/<%= todo.id %>?_method=DELETE" method="POST" style="display:inline;">
-                            <button type="submit">Delete</button>
-                        </form>
+                        <span>(Added: <%= new Date(todo.created_at).toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' ,
+                                dateStyle: 'medium' , timeStyle: 'short' }) %>)</span>
+                        <% if (todo.completed) { %>
+                            <span>(Completed: <%= new Date(todo.completed_at).toLocaleString('en-IN', {
+                                    timeZone: 'Asia/Kolkata' , dateStyle: 'medium' , timeStyle: 'short' }) %>)</span>
+                            <% } %>
+                                <form action="/todos/<%= todo.id %>?_method=DELETE" method="POST"
+                                    style="display:inline;">
+                                    <button type="submit">Delete</button>
+                                </form>
                 </li>
                 <% }) %>
         </ul>
